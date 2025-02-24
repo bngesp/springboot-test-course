@@ -2,7 +2,7 @@ package com.qa.uam.sid.projet.test.integration.model;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "test_user")
 public class User {
 
     @Id
