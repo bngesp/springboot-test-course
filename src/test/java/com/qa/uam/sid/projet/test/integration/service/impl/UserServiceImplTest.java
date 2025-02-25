@@ -9,7 +9,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
 
 import java.util.List;
@@ -62,7 +61,7 @@ class UserServiceImplTest {
 
         Assert.notNull(user1, " il doit y avoir forcement un utilisateur");
         assertFalse(user1.isEmpty());
-        Assertions.assertSame(user1.get().getNom(), "ngom");
+        Assertions.assertSame( "ngom", user1.get().getNom());
     }
 
     @Test
