@@ -36,7 +36,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void deletUser(Long id) {
+        // recupere le user by id
         Optional<User> user= this.userRepository.findById(id);
+
+        // suppression
         user.ifPresent(userRepository::delete);
     }
 

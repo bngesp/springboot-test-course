@@ -33,13 +33,14 @@ public class UserController {
     }
 
     @GetMapping("/users/{id}")
-    public Optional<User> findOne(@RequestParam Long id){
+    public Optional<User> findOne(@PathVariable Long id){
        return this.userService.findUserById(id);
     }
 
+    // user?id={ret} => requestParam
 
     @DeleteMapping("/users/{id}")
-    public void deleteUser(@RequestParam Long id){
+    public void deleteUser(@PathVariable Long id){
         this.userService.deletUser(id);
     }
 
